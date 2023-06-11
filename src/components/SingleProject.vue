@@ -5,7 +5,7 @@
       <div class="icons">
         <span class="material-icons">edit</span>
         <span @click="deleteProject" class="material-icons">delete</span>
-        <span class="material-icons">done</span>
+        <span @click="toggleIfDone" class="material-icons">done</span>
       </div>
     </div>
     <div v-if="show_details" class="details">
@@ -35,6 +35,13 @@ export default {
       fetch( this.uri, { method: 'DELETE' })
         .then( () => this.$emit( 'delete', this.project.id ))
         .catch( err => console.log( err ))
+    },
+    toggleIfDone() {
+      fetch( this.uri, { 
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify( { complete: !this.project.complete })
+      })
     }
   }
 }
