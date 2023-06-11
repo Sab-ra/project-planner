@@ -1,5 +1,5 @@
 <template>
-  <div class="project">
+  <div class="project" v-bind:class="{ complete: project.complete }">
     <div class="actions">
       <h3 @click="toggleDetails">{{ project.title }}</h3>
       <div class="icons">
