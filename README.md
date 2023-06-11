@@ -1,5 +1,7 @@
 # project-planner
 
+This project is lectured by NetNinja.dev Shaun Pelling.
+
 ## Project setup
 ```
 npm install
