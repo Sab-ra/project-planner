@@ -25,5 +25,10 @@
 </script>
 
 <style>
-
+  form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
 </style>
