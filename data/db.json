@@ -1,16 +1,22 @@
 {
   "project": [
     {
-      "id": 1,
-      "title": "Create new homepage banner",
-      "details": "I was called a goodness of euphoria",
-      "complete": false
-    },
-    {
       "id": 2,
       "title": "Make marketing email",
       "details": "I was called a goodness of mistery",
-      "complete": false
+      "complete": true
+    },
+    {
+      "title": "Feed the Cat",
+      "details": "My cat needs to be fed once a day",
+      "complete": false,
+      "id": 3
+    },
+    {
+      "title": "Run sprint review",
+      "details": "We need to run it with the team\n",
+      "complete": true,
+      "id": 4
     }
   ]
 }

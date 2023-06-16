@@ -23,7 +23,14 @@
           details: this.details,
           complete: false
         }
-        console.log( project )
+        
+        fetch( 'http://localhost:3000/project', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify( project )
+        }).then( () => {
+          this.$router.push( '/' )
+        }).catch( err => console.log( err ))
       }
     }
   }
