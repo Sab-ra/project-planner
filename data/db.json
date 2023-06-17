@@ -1,40 +1,22 @@
 {
   "project": [
     {
-      "id": 2,
-      "title": "Make marketing email",
-      "details": "I was called a goodness of mistery",
-      "complete": true
+      "title": "Add a submit handler to update the project",
+      "details": "Do something!",
+      "complete": true,
+      "id": 1
     },
     {
-      "title": "Feed the Cat",
-      "details": "My cat needs to be fed once a day",
+      "title": "Patch the project record in DB",
+      "details": "What a fuck!",
+      "complete": true,
+      "id": 2
+    },
+    {
+      "title": "Redirect to the home page when done",
+      "details": "Do",
       "complete": true,
       "id": 3
-    },
-    {
-      "title": "Run sprint review",
-      "details": "We need to run it with the team\n",
-      "complete": true,
-      "id": 4
-    },
-    {
-      "title": "Add a form to edit project",
-      "details": "Shall be like this one (Add a new project), but with pre-filled Title and Details\n",
-      "complete": false,
-      "id": 5
-    },
-    {
-      "title": "Copy dummy form",
-      "details": "Just from add project, and cut the submit out",
-      "complete": true,
-      "id": 6
-    },
-    {
-      "title": "Connect data to the Edit project form",
-      "details": "Create data objects",
-      "complete": false,
-      "id": 7
     }
   ]
 }
