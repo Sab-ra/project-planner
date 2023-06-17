@@ -3,7 +3,7 @@
     {
       "title": "Add a submit handler to update the project",
       "details": "Do something!",
-      "complete": false,
+      "complete": true,
       "id": 1
     },
     {
