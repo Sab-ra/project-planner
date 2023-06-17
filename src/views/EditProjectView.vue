@@ -24,7 +24,8 @@ export default {
     fetch( this.uri )
       .then( response => response.json() )
       .then( data => {
-        console.log( data )
+        this.title = data.title
+        this.details = data.details
       })
   } 
 }
