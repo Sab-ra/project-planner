@@ -3,7 +3,9 @@
     <div class="actions">
       <h3 @click="toggleDetails">{{ project.title }}</h3>
       <div class="icons">
-        <span class="material-icons">edit</span>
+        <router-link v-bind:to="{ name: 'edit_project', params: { id: project.id }}">
+          <span class="material-icons">edit</span>
+        </router-link>
         <span @click="deleteProject" class="material-icons">delete</span>
         <span @click="toggleIfDone" class="material-icons tick">done</span>
       </div>

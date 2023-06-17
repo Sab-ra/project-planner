@@ -17,7 +17,8 @@ const routes = [
   {
     path: '/project/:id',
     name: 'edit_project',
-    component: EditProjectView
+    component: EditProjectView,
+    props: true
   }
 ]
 
