@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <FilterNav @filterChange="current_filter = $event" />
     <div v-if="projects.length">
       <div v-for="project in projects" v-bind:key="project.id">
         <SingleProject v-bind:project="project" 
@@ -15,15 +16,18 @@
 
 <script>
 import SingleProject from "../components/SingleProject.vue"
+import FilterNav from "../components/FilterNav.vue"
 
 export default {
   name: 'HomeView',
   components: {
-    SingleProject
+    SingleProject,
+    FilterNav
   },
   data() {
     return {
-      projects: []
+      projects: [],
+      current_filter: 'all'
     }
   },
   mounted() {
@@ -47,3 +51,18 @@ export default {
   }
 }
 </script>
+
+<style>
+.filter-nav button {
+  background: none;
+  border: none;
+  color: #bbb;
+  outline: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-right: 10px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
