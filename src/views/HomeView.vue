@@ -3,14 +3,14 @@
     <FilterNav @filterChange="current_filter = $event"
                v-bind:current_filter = 'current_filter' />
     <div v-if="projects.length">
-      <div v-for="project in projects" v-bind:key="project.id">
-        <SingleProject v-bind:project="project" 
-          @delete="handleDelete"
-          @complete="handleComplete"/>
+      <div v-for="project in filteredProjects" v-bind:key="project.id">
+      <SingleProject v-bind:project="project" 
+                      @delete="handleDelete"
+                      @complete="handleComplete"/>
       </div>
     </div>
     <div v-else>
-      <p>Loading projects...</p>
+      <p>Fucking around...</p>
     </div>
   </div>
 </template>
@@ -49,6 +49,17 @@ export default {
       })
       update_project.complete = !update_project.complete
     }
+  },
+  computed: {
+    filteredProjects() {
+      if( this.current_filter === 'done' ) {
+        return this.projects.filter( project => project.complete )
+      }
+      if( this.current_filter === 'in_progress' ) {
+        return this.projects.filter( project => !project.complete )
+      }
+      return this.projects
+      }
   }
 }
 </script>
